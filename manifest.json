@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "name": "__MSG_extentionName__",
+  "author": "Gabageba",
+  "action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "image/auto-skipper-icon-16x16.png",
+      "32": "image/auto-skipper-icon-32x32.png",
+      "48": "image/auto-skipper-icon-48x48.png",
+      "128": "image/auto-skipper-icon-128x128.png"
+    },
+    "default_area": "navbar",
+    "default_popup": "popup.html",
+    "default_title": "__MSG_extentionName__"
+  },
+  "default_locale": "ru",
+  "description": "__MSG_extentionDescription__",
+  "icons": {
+    "16": "image/auto-skipper-icon-16x16.png",
+    "32": "image/auto-skipper-icon-32x32.png",
+    "48": "image/auto-skipper-icon-48x48.png",
+    "128": "image/auto-skipper-icon-128x128.png"
+  }
+}
