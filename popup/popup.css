@@ -1,0 +1,88 @@
+h1,
+p,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.popup {
+  width: 300px;
+  background: #252e36;
+  border: 2px solid #765da5;
+  margin: 10px;
+}
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.extentionName {
+  color: #765da5;
+}
+
+.author {
+  color: #8d8c9e;
+}
+
+.inputBlock {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.customCheckbox {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.customCheckboxInput {
+  display: none;
+}
+
+.customCheckboxInput + .customCheckboxLabel,
+.customCheckboxInput + .customCheckboxLabel::after {
+  transition: 0.3s ease-in-out;
+}
+
+.customCheckboxInput + .customCheckboxLabel {
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  height: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #8d8c9e;
+}
+
+.customCheckboxInput + .customCheckboxLabel::after {
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background-color: #f6f5f3;
+}
+
+.customCheckboxInput:checked + .customCheckboxLabel::after {
+  left: 18px;
+  background-color: #f6f5f3;
+}
+
+.customCheckboxInput:checked + .customCheckboxLabel {
+  background-color: #765da5;
+}
+
+.customCheckboxName {
+  color: #8d8c9e;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}

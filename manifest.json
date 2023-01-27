@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "name": "__MSG_extentionName__",
   "author": "Gabageba",
+  "content_scripts": [
+    {
+      "matches": ["https://*.jut.su/*"],
+      "js": ["extentions/jquery-3.6.3.js", "jutsu/jutsu.js"]
+    }
+  ],
   "action": {
     "browser_style": true,
     "default_icon": {
@@ -12,7 +18,7 @@
       "128": "image/auto-skipper-icon-128x128.png"
     },
     "default_area": "navbar",
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_title": "__MSG_extentionName__"
   },
   "default_locale": "ru",
@@ -22,5 +28,7 @@
     "32": "image/auto-skipper-icon-32x32.png",
     "48": "image/auto-skipper-icon-48x48.png",
     "128": "image/auto-skipper-icon-128x128.png"
-  }
+  },
+  "homepage_url": "https://github.com/Gabageba",
+  "permissions": ["storage"]
 }
