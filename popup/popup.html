@@ -3,15 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="popup.css">
-  <title>Document</title>
+  <title>__MSG_extensionName__</title>
 </head>
 
 <body class='popup'>
   <div class='header'>
-    <h1 class='extentionName'>Auto skip</h1>
+    <h1 class='extentionName'>__MSG_extensionName__</h1>
     <h4 class='author'>by Gabageba</h4>
   </div>
   <div class='inputBlock'>
@@ -19,28 +17,35 @@
     <div class='customCheckbox'>
       <input type="checkbox" class='customCheckboxInput' id="skipOpenning" name="skipOpenning">
       <label for="skipOpenning" class="customCheckboxLabel"></label>
-      <span class='customCheckboxName'>Автопропуск опеннинга</span>
+      <span class='customCheckboxName'>__MSG_openingSkip__</span>
+    </div>
+
+    <div class='customCheckbox'>
+      <input type="checkbox" class='customCheckboxInput' id="skipEnding" name="nextEpisode">
+      <label for="skipEnding" class="customCheckboxLabel"></label>
+      <span class='customCheckboxName'>__MSG_endingSkip__</span>
     </div>
 
     <div class='customCheckbox'>
       <input type="checkbox" class='customCheckboxInput' id="nextEpisode" name="nextEpisode">
       <label for="nextEpisode" class="customCheckboxLabel"></label>
-      <span class='customCheckboxName'>Автозапуск следующей серии</span>
+      <span class='customCheckboxName'>__MSG_nextEpisode__</span>
     </div>
 
     <div class='customCheckbox'>
       <input type="checkbox" class='customCheckboxInput' id="openFullScreen" name="openFullScreen">
       <label for="openFullScreen" class="customCheckboxLabel"></label>
-      <span class='customCheckboxName'>Автооткрытие в полном экране</span>
+      <span class='customCheckboxName'>__MSG_fullScreen__</span>
     </div>
 
     <div class='customCheckbox'>
       <input type="checkbox" class='customCheckboxInput' id="autoplayEpisode" name="autoplayEpisode">
       <label for="autoplayEpisode" class="customCheckboxLabel"></label>
-      <span class='customCheckboxName'>Автозапуск серии</span>
+      <span class='customCheckboxName'>__MSG_autoPlay__</span>
     </div>
   </div>
   <script src='../extentions/jquery-3.6.3.js'></script>
+  <script src="popup.js"></script>
 </body>
 
 </html>

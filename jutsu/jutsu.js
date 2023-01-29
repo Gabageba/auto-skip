@@ -1,5 +1,6 @@
 const config = {
   attributes: true,
+  attributeFilter: ['class'],
 }
 
 function validateOpenningSkip(value) {
@@ -10,7 +11,7 @@ function validateOpenningSkip(value) {
   )
 }
 
-const callback = function (mutationList, observer) {
+const callback = function (mutationList) {
   for (let mutation of mutationList) {
     if (!mutation.target.classList.contains('vjs-hidden')) {
       mutation.target.click()
@@ -31,6 +32,9 @@ const getSkipOpenningButton = (validator) => {
 
 const observer = new MutationObserver(callback)
 
-$(document).ready(function () {
-  observer.observe(getSkipOpenningButton(validateOpenningSkip), config)
+$(window).on('load', function () {
+  const skipOpenningButton = getSkipOpenningButton(validateOpenningSkip)
+  if (skipOpenningButton) {
+    observer.observe(skipOpenningButton, config)
+  }
 })

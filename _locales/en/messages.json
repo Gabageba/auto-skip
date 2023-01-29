@@ -1,8 +1,23 @@
 {
-  "extentionName": {
-    "message": "Auto Skipper"
+  "extensionName": {
+    "message": "Cool name"
   },
-  "extentionDescription": {
-    "message": "Just a automatic skip opening "
+  "extensionDescription": {
+    "message": "Imagine there's some fucking important description here"
+  },
+  "openingSkip": {
+    "message": "Autoskip openning"
+  },
+  "endingSkip": {
+    "message": "Autoskip ending"
+  },
+  "nextEpisode": {
+    "message": "Autoplay next episode"
+  },
+  "fullScreen": {
+    "message": "Autoopen full screen mode"
+  },
+  "autoPlay": {
+    "message": "Auto play mode"
   }
 }

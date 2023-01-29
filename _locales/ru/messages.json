@@ -1,8 +1,23 @@
 {
-  "extentionName": {
-    "message": "Autskipper"
+  "extensionName": {
+    "message": "Крутое название"
   },
-  "extentionDescription": {
-    "message": "Просто автоматический пропуск опеннинга"
+  "extensionDescription": {
+    "message": "Представьте, что здесь есть какое-то пиздец важное описание"
+  },
+  "openingSkip": {
+    "message": "Автопропуск опеннинга"
+  },
+  "endingSkip": {
+    "message": "Автопропуск эндинга"
+  },
+  "nextEpisode": {
+    "message": "Автозапуск следующей серии"
+  },
+  "fullScreen": {
+    "message": "Автооткрытие в полном экране"
+  },
+  "autoPlay": {
+    "message": "Автозапуск серии"
   }
 }
