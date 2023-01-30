@@ -47,7 +47,7 @@ h4 {
 
 .customCheckboxInput + .customCheckboxLabel,
 .customCheckboxInput + .customCheckboxLabel::after {
-  transition: 0.3s ease-in-out;
+  transition: 0.13s ease-in-out;
 }
 
 .customCheckboxInput + .customCheckboxLabel {
