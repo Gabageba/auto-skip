@@ -33,6 +33,4 @@ options.change(function () {
   setOption(this.id, this.checked)
 })
 
-chrome.storage.sync.set({ nextEpisode: false })
-
 getOptions(options)
