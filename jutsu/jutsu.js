@@ -3,12 +3,17 @@ const config = {
   attributeFilter: ['class'],
 }
 
-let options
+const optionsName = ['skipOpenning', 'skipEnding', 'nextEpisode', 'autoplayEpisode']
+let options = {}
 
 const getOptions = () => {
-  chrome.storage.sync.get(null).then((item) => {
-    options = item
-  })
+  for (let i = 0; i < optionsName.length; i++) {
+    chrome.storage.sync.get({ [optionsName[i]]: true }).then((item) => {
+      for (key in item) {
+        options[key] = item[key]
+      }
+    })
+  }
 }
 
 chrome.storage.onChanged.addListener((changes) => {
