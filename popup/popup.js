@@ -17,16 +17,16 @@ localizeHtmlPage()
 
 const options = $('.customCheckboxInput')
 
-const setOption = (key, value) => {
-  chrome.storage.sync.set({ [key]: value })
-}
-
 const getOptions = (options) => {
   for (let i = 0; i < options.length; i++) {
     chrome.storage.sync.get({ [options[i].id]: true }).then((item) => {
       options[i].checked = item[options[i].id]
     })
   }
+}
+
+const setOption = (key, value) => {
+  chrome.storage.sync.set({ [key]: value })
 }
 
 options.change(function () {
