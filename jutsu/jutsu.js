@@ -106,13 +106,13 @@ const observer = new MutationObserver(callback)
 getOptions()
 
 $(window).on('load', function () {
-  $('body').keypress((event) => {
-    if (event.keyCode === 70 || event.keyCode === 102) {
-      $('.vjs-fullscreen-control').click()
-    }
-  })
-
   setTimeout(() => {
+    $('body').keypress((event) => {
+      if (event.keyCode === 70 || event.keyCode === 102) {
+        $('.vjs-fullscreen-control').click()
+      }
+    })
+
     turnOnObserver()
     if (options.autoplayEpisode) {
       $('.vjs-big-play-button').click()
