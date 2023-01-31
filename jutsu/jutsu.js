@@ -102,24 +102,20 @@ const callback = (mutationList) => {
   }
 }
 
-const autoOpenFullscreen = () => {
-  $('.vjs-fullscreen-control').click()
-}
-
 const observer = new MutationObserver(callback)
 getOptions()
 
 $(window).on('load', function () {
-  $('body').keyup((event) => {
-    if (event.keyCode === 70) {
+  $('body').keypress((event) => {
+    if (event.keyCode === 70 || event.keyCode === 102) {
       $('.vjs-fullscreen-control').click()
     }
   })
 
-  turnOnObserver()
-  if (options.autoplayEpisode) {
-    setTimeout(() => {
+  setTimeout(() => {
+    turnOnObserver()
+    if (options.autoplayEpisode) {
       $('.vjs-big-play-button').click()
-    }, 500)
-  }
+    }
+  }, 500)
 })
