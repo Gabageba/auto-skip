@@ -5,7 +5,7 @@ const config = {
 
 let options
 
-function getOptions() {
+const getOptions = () => {
   chrome.storage.sync.get(null).then((item) => {
     options = item
   })
@@ -33,7 +33,7 @@ const getButton = (validator) => {
   return currentButton
 }
 
-function validateOpenningSkip(value) {
+const validateOpenningSkip = (value) => {
   return (
     value.nodeName === 'DIV' &&
     value.classList.contains('vjs-overlay-bottom-left') &&
@@ -41,7 +41,7 @@ function validateOpenningSkip(value) {
   )
 }
 
-function validateNextEpisode(value) {
+const validateNextEpisode = (value) => {
   return (
     value.nodeName === 'DIV' &&
     value.classList.contains('vjs-overlay-bottom-right') &&
@@ -89,7 +89,7 @@ const deleteObserver = () => {
   turnOnObserver()
 }
 
-const callback = function (mutationList) {
+const callback = (mutationList) => {
   for (let mutation of mutationList) {
     if (!mutation.target.classList.contains('vjs-hidden')) {
       mutation.target.click()

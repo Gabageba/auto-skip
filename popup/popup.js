@@ -1,4 +1,4 @@
-function localizeHtmlPage() {
+const localizeHtmlPage = () => {
   const objects = $('html')
   for (let j = 0; j < objects.length; j++) {
     const obj = objects[j]
@@ -13,6 +13,7 @@ function localizeHtmlPage() {
     }
   }
 }
+
 localizeHtmlPage()
 
 const options = $('.customCheckboxInput')
